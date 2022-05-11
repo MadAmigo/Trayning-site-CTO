@@ -1,0 +1,25 @@
+.login_wrapper{
+display: flex;
+flex-direction: column;
+margin:  0 20% ;
+max-width: 300px;
+padding-top: 40px;
+
+}
+.loginForm {
+	border: 2px solid black;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	align-items: flex-start;
+}
+.login_wrapper p{
+	align-self: center;
+	font-style: oblique;
+	font-weight: bold;
+}
+.field{
+margin: 10px;
+width: 100%;
+
+}

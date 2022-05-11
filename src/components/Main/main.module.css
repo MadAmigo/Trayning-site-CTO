@@ -1,0 +1,7 @@
+.main p {
+    text-indent: 30px; /* Отступ первой строки в пикселах */
+   }
+.main {
+	margin: 0 20px ;
+	padding-top: 40px;
+}

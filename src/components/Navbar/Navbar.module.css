@@ -1,0 +1,50 @@
+
+.navbar_wrapper{
+	border: solid 2px black;
+	width: 200px;
+	height: 400px;
+}
+
+.navbar_wrapper p {
+	
+	text-align: center;
+}
+.navbar {
+	
+	display: flex;
+	height: 70%;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.item{
+	border: 3px solid black;
+	border-radius: 10px;
+	display: block;
+	width: 160px;
+	height: 60px;
+	background: red;
+}
+
+.element_navbar {
+
+	display: flex;
+	width: 100%;
+	height: 100%;
+text-decoration: none;
+	align-items: center;
+  justify-content: center;
+}
+
+.active{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	text-decoration: none;
+	background: greenyellow;
+	align-items: center;
+  justify-content: center;
+
+}
