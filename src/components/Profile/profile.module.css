@@ -1,0 +1,34 @@
+.profile {
+margin: 20px 50px;
+	
+}
+.profile img{
+
+	max-width: 180px;
+	max-height: 180px;
+}
+
+.button{
+
+	 width:10px;
+	 height: 16px;
+}
+
+.lookingForAJobDescription {
+	max-width: 200px;
+	padding: 10px;
+	border: solid 2px black;
+	
+}
+
+.contacts_item {
+	margin-left:80px;
+}
+
+.profilePhoto_button {
+	display: inline;
+}
+
+.field_LookingForAJobDescription  {
+	min-width: 300px;
+}

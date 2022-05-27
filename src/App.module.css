@@ -1,0 +1,20 @@
+.app_wrapper {
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  grid-template-areas: 'header header'
+                        'navbar infopage';
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .navbar{
+    grid-area: navbar;
+  }
+
+  .infopage {
+    grid-area: infopage;
+  }
