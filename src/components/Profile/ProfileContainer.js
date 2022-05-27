@@ -13,9 +13,10 @@ const params = useParams()
 const clientId=params.userId
 
 const [editMode, setEditMode]=useState(false)
+const {toUpdateProfile,status}={...props}
 
-useEffect(()=>{props.getClientProfile(clientId)},[props.toUpdateProfile,clientId]) 
-useEffect(()=>{props.getStatus(clientId)},[props.status]) 
+useEffect(()=>{props.getClientProfile(clientId)},[toUpdateProfile,clientId]) 
+useEffect(()=>{props.getStatus(clientId)},[status]) 
 
 const onSubmit = (formData) => {
 	props.putProfile(formData)
