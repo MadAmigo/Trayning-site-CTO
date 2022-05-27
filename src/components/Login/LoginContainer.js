@@ -14,15 +14,24 @@ const onSubmit=(formData)=> {
   props.postLogin(formData)
  }
  
+<<<<<<< HEAD
 
 	return (
 		<Login onSubmit={onSubmit} isAuth={props.isAuth} hasAuthError={props.hasAuthError}/>
+=======
+console.log('props.isAuth',props.isAuth)
+	return (
+		<Login onSubmit={onSubmit} isAuth={props.isAuth}/>
+>>>>>>> 2c1173b9aa6a4ae08dd3abfc90e2e8fb577702e0
 		)
 }
 
 const mapStateToProps = (state) => {
   return { isAuth:state.auth.isAuth,
+<<<<<<< HEAD
            hasAuthError: state.auth.hasAuthError
+=======
+>>>>>>> 2c1173b9aa6a4ae08dd3abfc90e2e8fb577702e0
    };
   }; 
 

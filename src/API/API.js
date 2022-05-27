@@ -22,6 +22,7 @@ export const authAPI={
 	            .post(`auth/login`,{email,password,rememberMe})},
 
 	  deleteLogin(){return instance.delete(`auth/login`)},           
+<<<<<<< HEAD
 }
 export const profileAPI={
 
@@ -42,6 +43,10 @@ export const profileAPI={
 }	 	
 
 
+=======
+
+}
+>>>>>>> 2c1173b9aa6a4ae08dd3abfc90e2e8fb577702e0
 
 
 

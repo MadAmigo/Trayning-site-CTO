@@ -10,6 +10,7 @@ const Header =(props) =>{
 	
 	return(
 <div className={s.header}>
+<<<<<<< HEAD
 		<div className={s.logo} >
 			<img src={hunter_logo} alt=''/>
 		</div>
@@ -26,6 +27,25 @@ const Header =(props) =>{
 		</div>
 		:<div className={s.login}>
 			<NavLink  to='/login'><p>login</p></NavLink>
+=======
+		<div className={s.logo}>
+			<img src={hunter_logo} />
+		</div>
+		<div className={s.CTO}>
+		CTO
+		</div>
+		<div className={s.HUNTER}>
+		HUNTER
+		</div>
+		{console.log('isAuth',props.isAuth)}
+		{props.isAuth?
+		<div className={s.login}>
+		<img src={login_photo}/>
+		<NavLink onClick={props.unLogin} to='/login'><p>unlogin</p></NavLink>
+		</div>
+		:<div className={s.login}>
+		<NavLink  to='/login'><p>login</p></NavLink>
+>>>>>>> 2c1173b9aa6a4ae08dd3abfc90e2e8fb577702e0
 		</div>
 	}
 </div>

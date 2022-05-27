@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import  s from './profile.module.css';
 import commonСlientPhoto from '../../images/kisspng-computer-icons-user-profile-synonyms-and-antonyms-5b013f458c5d78.223528981526808389575.png';
@@ -53,10 +54,21 @@ const isOwner=(props.clientId==props.myId)?true:false;
 			{props.editMode&&<ProfileInput {...props} initialValues={props.dataClientProfile}/>}
 
 
+=======
+import React from 'react';
+import  s from './profile.module.css';
+
+const Profile =() =>{
+	return(
+<div className={s.profile}>
+      Profile
+		
+>>>>>>> 2c1173b9aa6a4ae08dd3abfc90e2e8fb577702e0
 </div>
 
 	)
 }
+<<<<<<< HEAD
 
 
 
@@ -176,4 +188,6 @@ const ProfileInputFields =(props) => {
 
 const ProfileInput = reduxForm({form:'profileInput', enableReinitialize: true})(ProfileInputFields);
 
+=======
+>>>>>>> 2c1173b9aa6a4ae08dd3abfc90e2e8fb577702e0
 export default Profile;
