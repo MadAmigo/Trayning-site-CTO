@@ -1,6 +1,6 @@
 import React from 'react';
 import  s from './Login.module.css';
-<<<<<<< HEAD
+
 import {Field, reduxForm, reset } from 'redux-form';
 import {Navigate} from 'react-router-dom';
 import {email} from '../../Common/Validators.js';
@@ -14,10 +14,7 @@ import {InputFormModel} from '../../Common/Form FieldModels.js';
 
 const minLength6=minLength(6);
 const maxLength20=maxLength(20)
-=======
-import {Field, reduxForm} from 'redux-form';
-import {Navigate} from 'react-router-dom';
->>>>>>> 2c1173b9aa6a4ae08dd3abfc90e2e8fb577702e0
+
 
 const Login = (props)=> {
 
@@ -25,11 +22,9 @@ const Login = (props)=> {
 	return(
 	   <div className={s.login_wrapper}>
 		<p>Login</p>
-<<<<<<< HEAD
+
 		<LoginForm onSubmit={props.onSubmit} hasAuthError={props.hasAuthError} />
-=======
-		<LoginForm onSubmit={props.onSubmit} />
->>>>>>> 2c1173b9aa6a4ae08dd3abfc90e2e8fb577702e0
+
 	   </div>
 	)
 
@@ -39,7 +34,7 @@ const LoginFields =(props) =>{
 	return(
       <form onSubmit={props.handleSubmit} className={s.loginForm}>
         <div className={s.field}>
-<<<<<<< HEAD
+
         	<Field
         name="email"
         type="email"
@@ -60,20 +55,13 @@ const LoginFields =(props) =>{
         
       />
         	
-=======
-        	<Field  name='email' type='text' component='input' />
-        </div>
-		
-        <div className={s.field}>
-        	<Field  name='password' type='password' component='input' />
->>>>>>> 2c1173b9aa6a4ae08dd3abfc90e2e8fb577702e0
         </div>
 
         <div className={s.field}>
         	<Field  name='rememberMe' type='checkbox' component='input' />   remember Me
         </div>
 
-<<<<<<< HEAD
+
         {props.hasAuthError&&<div className={s.error}>{props.hasAuthError}</div>}
 
         <div className={s.field}>
@@ -81,10 +69,7 @@ const LoginFields =(props) =>{
         	<button type="button" disabled={props.pristine || props.submitting} onClick={props.reset}>
           Clear 
         </button>
-=======
-        <div className={s.field}>
-        	<button  type='submit'>submit</button>
->>>>>>> 2c1173b9aa6a4ae08dd3abfc90e2e8fb577702e0
+
         </div>
        </form>
 	)
