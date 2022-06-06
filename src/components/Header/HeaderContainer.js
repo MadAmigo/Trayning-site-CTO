@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { connect} from 'react-redux';
 import { compose } from 'redux';
 import Header from './Header.js';
 import {getAuthData, unLogin} from './../../redux/authReducer.js';
-
-
-
-
+import {getSelectorIsAuth} from '../../redux/selectors.js'
 
 const HeaderContainer = (props)=>{
    
@@ -19,15 +16,12 @@ const HeaderContainer = (props)=>{
 		)
 }
 
-
 const mapStateToProps = (state) => {
-  return { isAuth: state.auth.isAuth,
-  		   
-   };
-  }; 
+  return { isAuth: getSelectorIsAuth(state),  		   
+   }
+} 
 
-  export default compose(
+export default compose(
     connect(mapStateToProps, {getAuthData,unLogin}),
-   
-)(HeaderContainer)
+    )(HeaderContainer)
 

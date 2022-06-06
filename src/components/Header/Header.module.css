@@ -1,67 +1,61 @@
 .header {
 	background-image: linear-gradient(red 1%, yellow 70%, green );
-	position: relative;
-	
+	position: relative;		
 	height: 100px;
 	display:grid;
-	 grid-template-columns: 1fr 2fr 3fr 1fr;
-     
+	grid-template-columns: 1fr 2fr 3fr 1fr;		
 	grid-template-areas:'logo CTO HUNTER login' ;
 	text-align: center;
-}
+	}
+
 .logo{
-  width: 20px;
-	text-align: center;
-	
-grid-area: logo;
-display: flex;
-  align-items: center;
-  justify-content: center;
-}
+	width          : 20px;
+	text-align     : center;	
+	grid-area      : logo;
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+	}
 
 .header img {
 	margin-left: 120px;
-	max-width: 80px;
-}
+	max-width  : 80px;
+	}
+
 .CTO{
-	font-size: 30px;
-	padding-right: 10px;
-	
-	display: flex;
-  align-items: center;
-  justify-content: right;
-
-grid-area: CTO;
-}
+	font-size      : 30px;
+	padding-right  : 10px;	
+	display        : flex;
+	align-items    : center;
+	justify-content: right;	
+	grid-area      : CTO;
+	}
 .HUNTER{
-
-	font-family: initial;
-	font-weight: bold;
-	font-style: !important;
-	font-size: 60px;
-	padding-left: 3px;
-	display: flex;
-	align-items: center;
+	font-family   : initial;
+	font-weight   : bold;
+	font-style    : !important;
+	font-size     : 60px;
+	padding-left  : 3px;
+	display       : flex;
+	align-items   : center;
 	padding-bottom: 12px;
+	grid-area     : HUNTER;
+	}
 
-	
-grid-area: HUNTER;
-}
-.login{
-	
-  align-self: center;
-  justify-content: center;
-
-grid-area: login;
-}
+.login{	
+	align-self     : center;
+	justify-content: center;
+	grid-area      : login;
+	}
 
 .login img {
-padding-top: 10px;	
-margin: 0 auto;
-max-width: 40px;
-}
+	padding-top: 10px;	
+	margin     : 0 auto;
+	max-width  : 40px;
+	}
+
 .login p {
-margin-top: -2px;
-text-decoration: none;
-color: red;
-}
+	margin-top     : -2px;
+	text-decoration: none;
+	color          : red;
+	}

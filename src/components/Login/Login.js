@@ -1,20 +1,15 @@
 import React from 'react';
 import  s from './Login.module.css';
-
-import {Field, reduxForm, reset } from 'redux-form';
+import {Field, reduxForm } from 'redux-form';
 import {Navigate} from 'react-router-dom';
 import {email} from '../../Common/Validators.js';
 import {aol} from '../../Common/Validators.js';
 import {minLength} from '../../Common/Validators.js';
 import {maxLength} from '../../Common/Validators.js';
-import {required} from '../../Common/Validators.js';
-import {password} from '../../Common/Validators.js';
 import {InputFormModel} from '../../Common/Form FieldModels.js';
 
-
 const minLength6=minLength(6);
-const maxLength20=maxLength(20)
-
+const maxLength40=maxLength(40)
 
 const Login = (props)=> {
 
@@ -27,7 +22,6 @@ const Login = (props)=> {
 
 	   </div>
 	)
-
 }
 
 const LoginFields =(props) =>{
@@ -40,7 +34,7 @@ const LoginFields =(props) =>{
         type="email"
         component={InputFormModel}
         label="Email"
-        validate={email}
+        validate={[email,minLength6,maxLength40]}
         warn={aol}
       />
         </div>

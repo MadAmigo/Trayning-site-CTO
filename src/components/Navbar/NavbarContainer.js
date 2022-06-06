@@ -1,23 +1,16 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { connect} from 'react-redux'
-import Preloader from '../Preloader/Preloader.js'
 import Navbar from './Navbar.js'
-import { compose } from 'redux';
-
-
+import { compose } from 'redux'
+import {getSelectorMyId} from '../../redux/selectors.js'
 
 const NavbarContainer =(props) =>{
-	
-if(!props.myId)return (<Preloader />)
-            	 return (<Navbar userId={props.myId}/>)}
-
+	           return (<Navbar userId={props.myId}/>)}
 
  const mapStateToProps = (state) => {
-   return {   		   
-   		   myId:state.auth.id,		             
+   return { myId: getSelectorMyId(state)  		    		  	             
     }
-}
-  
+}  
   export default compose(
      connect(mapStateToProps,)
  )(NavbarContainer)

@@ -1,22 +1,29 @@
 .clients {
-	display: flex;
+	display       : flex;
 	flex-direction: column;
-	max-width: 500px;
-
-}
-
-.clients p {
-	font-weight: bold;
- align-self: center;
+	max-width     : 500px;
 	}
+
+.serch {
+		display              : inline-grid;
+		grid-template-columns: 1fr 4fr;
+		margin               : 20px 0px;
+		font-weight          : bold;
+		align-self           : center;
+		}
+
+.serchField {
+	align-self : center;
+	margin-left: 140px
+	}	
 .clientPhotos{
 	display: blok;	
 }
 
 .clients img {
-  max-width: 80px;
-  height: 80px; 
-}
+	max-width: 80px;
+	height   : 80px; 
+	}
 
 .client {
 	border: 3px solid black;
@@ -25,14 +32,14 @@
 
 .paging {
 	align-self: center;
-	display: flex;
-}
+	display   : flex;
+	}
 
 .numberPage {
-	border: 1px solid black;
+	border       : 1px solid black;
 	border-radius: 2px;
-	margin: 0 2px;
-	padding: 5px;
+	margin       : 0 2px;
+	padding      : 5px;
 }
 
 .numberPage.active {
@@ -40,6 +47,6 @@
 }
 
 .paging :hover {
-        color: #ffe; /* Цвет текста активного пункта */
-        background-color: #5488af; /* Цвет фона активного пункта */
+		color           : #ffe; /* Цвет текста активного пункта */
+		background-color: #5488af; /* Цвет фона активного пункта */
       }

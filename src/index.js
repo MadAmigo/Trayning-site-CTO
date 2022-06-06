@@ -23,4 +23,3 @@ store.subscribe(()=>{
   let state=store.getState()
   rerenderEntireTree(state)})
 
-//var state=window.store.getState()
