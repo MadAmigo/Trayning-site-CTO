@@ -26,7 +26,7 @@ const Login = (props)=> {
 
 const LoginFields =(props) =>{
 	return(
-      <form onSubmit={props.handleSubmit} className={s.loginForm}>
+      <form onSubmit={props.handleSubmit} className={s.loginForm} >
         <div className={s.field}>
 
         	<Field
@@ -36,6 +36,7 @@ const LoginFields =(props) =>{
         label="Email"
         validate={[email,minLength6,maxLength40]}
         warn={aol}
+        autocomplete="on"
       />
         </div>
 		
@@ -45,7 +46,7 @@ const LoginFields =(props) =>{
         type="password"
         component={InputFormModel}
         label="password"
-       
+        autocomplete="on"
         
       />
         	

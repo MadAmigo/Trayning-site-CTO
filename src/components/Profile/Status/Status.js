@@ -1,7 +1,7 @@
-import React, { useState,  useEffect } from 'react'
+import React, { useState,  useEffect, memo } from 'react'
 import  s from '../profile.module.css'
 
-const Status =(props)=>{   
+const Status =memo((props)=>{   
   //  try to do using redux-form with initial Values as beginning status
 const [status,setStatus]=useState(props.status||'status yok')
 useEffect(()=>{setStatus(props.status||'status yok')},[props.status]) // for updata input field
@@ -29,5 +29,6 @@ if(props.isOwner){
 	 </div>      
      </div>
     )
-  };
+  }
+  )
 export default Status;

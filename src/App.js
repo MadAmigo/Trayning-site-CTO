@@ -1,5 +1,5 @@
 import HeaderContainer from './components/Header/HeaderContainer.js'
-import React, {Component} from 'react'
+import React, {Component, Suspense } from 'react'
 import s from './App.module.css'
 import NavbarContainer from './components/Navbar/NavbarContainer.js'
 import Main from './components/Main/Main.js'
@@ -10,8 +10,10 @@ import { connect} from 'react-redux'
 import { compose } from 'redux'
 import Preloader from './Common/Preloader/Preloader.js'
 import {checkInishial} from './redux/AppReduser.js'
-import {getSelectorInitial} from './redux/selectors.js'
-const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer.js'))
+import {Selectors} from './redux/selectors.js'
+//import ProfileContainer from './components/Profile/ProfileContainer.js'
+
+const ProfileContainer=React.lazy(() => import('./components/Profile/ProfileContainer.js'))
 
 class App extends Component {
   componentDidMount(props){
@@ -27,28 +29,26 @@ if (!this.props.isInitial) return <Preloader />
             <div className={s.navbar}><NavbarContainer /></div>
             
             <div className={s.infopage}>
+            <Suspense fallback={<Preloader />}>
               <Routes>
                 <Route path="/main" element={<Main/>} />
                 <Route path="/users" element={<ClientsContainer/>} />
-                <Route path="/profile/:userId" element={
-                                      <React.Suspense fallback={<>...</>}>
-                                        <ProfileContainer />
-                                      </React.Suspense>
-                                      } />
+                <Route path="/profile/:userId" element={<ProfileContainer/>} />
                 <Route path="/login" element={<LoginContainer/>} />
                 <Route path="*" element={<NoMatch />} />
               </Routes> 
+             </Suspense> 
             </div>
           </div>       
   )}
 }
 
 const NoMatch = () => {
-  return <p>There's nothing here: 404!</p>;
+  return <p>There's nothing here: 404!</p>
 }
 
 const mapStateToProps = (state) => {
-  return { isInitial: getSelectorInitial(state)}    
+  return { isInitial: Selectors.getIsInitial(state)}    
    }
  
 export default compose(

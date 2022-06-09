@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
-import  s from './profile.module.css'
-import Preloader from '../../Common/Preloader/Preloader.js'
-import ProfileInput from './ProfileInputFields/ProfileInput.js'
+import  s from '../profile.module.css'
+import Preloader from '../../../Common/Preloader/Preloader.js'
+import ProfileInput from './ProfileInput.js'
 
 const Profile = memo((props) =>{
 //const sendSelectedPhoto=(event)=>{props.updataPhoto(event.target.files[0])} // version without component

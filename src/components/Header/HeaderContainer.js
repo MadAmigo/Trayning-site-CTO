@@ -3,7 +3,7 @@ import { connect} from 'react-redux';
 import { compose } from 'redux';
 import Header from './Header.js';
 import {getAuthData, unLogin} from './../../redux/authReducer.js';
-import {getSelectorIsAuth} from '../../redux/selectors.js'
+import {Selectors} from '../../redux/selectors.js'
 
 const HeaderContainer = (props)=>{
    
@@ -17,7 +17,7 @@ const HeaderContainer = (props)=>{
 }
 
 const mapStateToProps = (state) => {
-  return { isAuth: getSelectorIsAuth(state),  		   
+  return { isAuth: Selectors.getIsAuth(state),  		   
    }
 } 
 

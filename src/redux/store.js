@@ -10,8 +10,8 @@ let redusers=combineReducers({
 	clientsPage:clientReducer,
 	auth:authReducer,
 	form:formReducer,
-	App:AppReduser,
 	profile:profileReducer,
+	App:AppReduser,
 
 })
 

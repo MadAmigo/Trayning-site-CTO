@@ -3,29 +3,29 @@ import { connect} from 'react-redux'
 import { compose } from 'redux'
 import Clients from './Clients.js'
 import {getClients} from './../../redux/clientReducer.js'
-import {getSelectorClients,getSelectorPageSize,getSelectorCurrentPage,getSelectorTotalCount,getSelectorToggleIsFetching } from '../../redux/selectors.js'
-
-
-
+import { Selectors } from '../../redux/selectors.js'
+import Preloader from '../../Common/Preloader/Preloader.js'
 
 
 const ClientsContainer = (props)=>{
      
-	return (
+//	if(props.toggleIsFetchingClients) 
+ // return (<Preloader />)
+  return (
 		<Clients clients={props.clients}
               pageSize={props.pageSize}
               totalCount={props.totalCount}
               getClients={props.getClients}           
-              toggleIsFetching={props.toggleIsFetching}/>
+              />
            		)
 }
 
 const mapStateToProps = (state) => {
- return { clients: getSelectorClients(state),
-          pageSize: getSelectorPageSize(state),
-          currentPage: getSelectorCurrentPage(state),
-          totalCount: getSelectorTotalCount(state),
-          toggleIsFetching: getSelectorToggleIsFetching(state),
+ return { clients: Selectors.getClients(state),
+          pageSize:  Selectors.getPageSize(state),
+          currentPage:  Selectors.getCurrentPage(state),
+          totalCount: Selectors.getTotalCount(state),
+          toggleIsFetchingClients: Selectors.getToggleIsFetchingClients(state),
    }
   } 
 
