@@ -1,7 +1,7 @@
 import React, {memo} from 'react'
 import  s from '../profile.module.css'
 import UpdataPhotoInput from './UpdataPhotoInput.js'
-import commonСlientPhoto from '../../../images/kisspng-computer-icons-user-profile-synonyms-and-antonyms-5b013f458c5d78.223528981526808389575.png'
+import commonСlientPhoto from '../../../images/kisspng.png'
 
 const ProfilePhoto =memo((props) =>{
 //const sendSelectedPhoto=(event)=>{props.updataPhoto(event.target.files[0])} // version without component

@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import s from './clients.module.css'
-import pingvin from './../../images/kisspng-computer-icons-user-profile-synonyms-and-antonyms-5b013f458c5d78.223528981526808389575.png'
+import pingvin from './../../images/kisspng.png'
 import {NavLink} from 'react-router-dom'
 import Paginator from '../../Common/Paginator.js'
 import SerchField from './SerchField.js'
