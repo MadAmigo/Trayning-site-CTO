@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/Trayning-site-CTO/static/css/main.46b50ecc.css",
-    "main.js": "/Trayning-site-CTO/static/js/main.6ae5d585.js",
+    "main.js": "/Trayning-site-CTO/static/js/main.e8089efb.js",
     "static/css/220.1d7480e1.chunk.css": "/Trayning-site-CTO/static/css/220.1d7480e1.chunk.css",
     "static/js/220.6c4a9bb2.chunk.js": "/Trayning-site-CTO/static/js/220.6c4a9bb2.chunk.js",
     "static/media/login_photo.jpg": "/Trayning-site-CTO/static/media/login_photo.32fe59ad41d239d0fa71.jpg",
     "static/media/kisspng.png": "/Trayning-site-CTO/static/media/kisspng.58b3f9a8f15f6d72f507.png",
     "index.html": "/Trayning-site-CTO/index.html",
     "main.46b50ecc.css.map": "/Trayning-site-CTO/static/css/main.46b50ecc.css.map",
-    "main.6ae5d585.js.map": "/Trayning-site-CTO/static/js/main.6ae5d585.js.map",
+    "main.e8089efb.js.map": "/Trayning-site-CTO/static/js/main.e8089efb.js.map",
     "220.1d7480e1.chunk.css.map": "/Trayning-site-CTO/static/css/220.1d7480e1.chunk.css.map",
     "220.6c4a9bb2.chunk.js.map": "/Trayning-site-CTO/static/js/220.6c4a9bb2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.46b50ecc.css",
-    "static/js/main.6ae5d585.js"
+    "static/js/main.e8089efb.js"
   ]
 }
