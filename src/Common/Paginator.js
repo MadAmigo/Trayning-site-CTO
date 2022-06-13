@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import s from '../components/Clients/clients.module.css'
 import Preloader from './Preloader/Preloader.js'
 
-const Paginator =({totalCount,pageSize=10,getClients}) =>{
-   const [currentPage,setCurrentPage]=useState(1)
-   useEffect(()=>{getClients(currentPage,pageSize)},[currentPage]) 
+const Paginator =({totalCount,
+				   pageSize=10,
+				   getClients,
+				   setCurrentPage,
+				   currentPage}) =>{
+   
+   
 	   
    let pageTotal=Math.ceil(totalCount/pageSize)   
    let pageCount = [];

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import s from './clients.module.css'
 import pingvin from './../../images/kisspng-computer-icons-user-profile-synonyms-and-antonyms-5b013f458c5d78.223528981526808389575.png'
 import {NavLink} from 'react-router-dom'
@@ -7,6 +7,9 @@ import SerchField from './SerchField.js'
 
 
 const Clients =(props) =>{
+
+const [currentPage,setCurrentPage]=useState(1)
+ useEffect(()=>{props.getClients(currentPage,props.pageSize)},[currentPage])
 
 const [updataPage, setUpdataPage]=useState('')
 const [checkedFullname, setCheckedFullname]=useState(true) // switch  visible input field Name
@@ -18,6 +21,7 @@ const deepCopy = (arrayForDeepCopy) => JSON.parse(JSON.stringify(arrayForDeepCop
 
 let arrayClientsForMap= deepCopy(props.clients)  
 let entrancedArray = deepCopy(props.clients)
+
 
 	if( updataPage.length>1 && !!checkedFullname) {
 		arrayClientsForMap=deepCopy(FilteredClientsNames(updataPage)) //deep copy array after filter
@@ -46,6 +50,8 @@ let entrancedArray = deepCopy(props.clients)
 
 	<Paginator totalCount={props.totalCount}
 				getClients={props.getClients}
+				currentPage={currentPage}
+				setCurrentPage={setCurrentPage}
 				/>
 
     	{arrayClientsForMap.map(client=>			    	

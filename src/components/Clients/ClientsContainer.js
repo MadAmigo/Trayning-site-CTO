@@ -5,7 +5,7 @@ import Clients from './Clients.js'
 import {getClients} from './../../redux/clientReducer.js'
 import { Selectors } from '../../redux/selectors.js'
 import Preloader from '../../Common/Preloader/Preloader.js'
-
+import {setTotalPageCount} from '../../redux/clientReducer.js'
 
 const ClientsContainer = (props)=>{
      
@@ -15,7 +15,8 @@ const ClientsContainer = (props)=>{
 		<Clients clients={props.clients}
               pageSize={props.pageSize}
               totalCount={props.totalCount}
-              getClients={props.getClients}           
+              getClients={props.getClients}
+              setTotalPageCount={props.setTotalPageCount}           
               />
            		)
 }
@@ -30,6 +31,6 @@ const mapStateToProps = (state) => {
   } 
 
   export default compose(
-        connect(mapStateToProps, {getClients}),  
+        connect(mapStateToProps, {getClients,setTotalPageCount}),  
         )(ClientsContainer)
 

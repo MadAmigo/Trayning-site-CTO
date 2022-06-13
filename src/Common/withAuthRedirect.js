@@ -10,7 +10,7 @@ let mapStateToPropsForRedirect = (state) => ({
 export const withAuthRedirect = (Component) => {
     const RedirectComponent =(props) => {
        		if (!props.isInitial) return (<div>Loading...</div>)
-            if (!props.isAuth) return <Navigate   to="/login"  /> 
+            if (!props.isInitial || !props.isAuth) return <Navigate   to="/login"  /> 
             return <Component {...props} />
         
     }
