@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect,useCallback } from 'react'
 import s from './clients.module.css'
 import pingvin from './../../images/kisspng.png'
 import {NavLink} from 'react-router-dom'
@@ -7,9 +7,14 @@ import SerchField from './SerchField.js'
 
 
 const Clients =(props) =>{
-
+const {getClients,pageSize}={...props}
 const [currentPage,setCurrentPage]=useState(1)
- useEffect(()=>{props.getClients(currentPage,props.pageSize)},[currentPage])
+
+const geUserDetail = useCallback(() => {
+  getClients(currentPage,pageSize)
+}, [currentPage,pageSize,getClients])
+
+useEffect(()=>{geUserDetail()},[geUserDetail])
 
 const [updataPage, setUpdataPage]=useState('')
 const [checkedFullname, setCheckedFullname]=useState(true) // switch  visible input field Name
