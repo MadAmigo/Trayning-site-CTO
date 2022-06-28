@@ -24,8 +24,7 @@ export const checkInishial = ()=>async (dispatch)=>{
 	 // promise=dispatch(any())                 реализованная через промисы
 	 //  Promise.all([promise]).then(()=>dispatch(setIsInitial()))
 	 // in authAPI.getAuthData() to insert  return --> to get back promise
-	 //if(response.data.fieldsErrors.length===0)   заблокированная инициализация
-	 	dispatch(setIsInitial()) 	 	
+	 if(response.data.fieldsErrors.length===0) 	dispatch(setIsInitial()) 	 	
 	 	 }
 
  export default AppReduser;

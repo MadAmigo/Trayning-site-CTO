@@ -21,7 +21,7 @@ class App extends Component {
   }
   
 render() {
-if (!this.props.isInitial) return <Preloader />
+//if (!this.props.isInitial) return <Preloader />
     return (
     
           <div className={s.app_wrapper}>
