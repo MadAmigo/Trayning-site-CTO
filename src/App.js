@@ -31,6 +31,7 @@ if (!this.props.isInitial) return <Preloader />
             <div className={s.infopage}>
             <Suspense fallback={<Preloader />}>
               <Routes>
+                <Route path="/" element={<Main/>} />
                 <Route path="/main" element={<Main/>} />
                 <Route path="/users" element={<ClientsContainer/>} />
                 <Route path="/profile/:userId" element={<ProfileContainer/>} />

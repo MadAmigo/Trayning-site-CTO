@@ -1,33 +1,42 @@
 .login_wrapper{
-display: flex;
-flex-direction: column;
-margin:  0 20% ;
-max-width: 300px;
-padding-top: 40px;
-
-}
-.loginForm {
-	border: 2px solid black;
-	display: flex;
+	display       : flex;
 	flex-direction: column;
-	padding: 20px;
-	align-items: flex-start;
-}
+	margin        :  0 20% ;
+	max-width     : 300px;
+	padding-top   : 40px;
+	}
+
+.loginForm {
+	border        : 2px solid black;
+	display       : flex;
+	flex-direction: column;
+	padding       : 20px;
+	align-items   : flex-start;
+	}
+
 .login_wrapper p{
-	align-self: center;
-	font-style: oblique;
+	align-self : center;
+	font-style : oblique;
 	font-weight: bold;
-}
+	}
+
 .field{
-margin: 10px;
-width: 100%;
-
-
-}
+	margin: 10px;
+	width : 100%;
+	}
 
 .error{
-	border: solid 2px red;
-	color: red;
+	border : solid 2px red;
+	color  : red;
 	padding: 0 10px;
+	}
 
-}
+input [type=email] {
+	border    : 2px solid green;
+	box-shadow: 2px 2px 4px black;
+	}
+
+input [type=password] {
+	border    : 2px solid yellow;
+	box-shadow: 2px 2px 4px black;
+	}	

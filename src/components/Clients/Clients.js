@@ -12,7 +12,7 @@ const [currentPage,setCurrentPage]=useState(1)
 
 const geUserDetail = useCallback(() => {
   getClients(currentPage,pageSize)
-}, [currentPage,pageSize,getClients])
+}, [currentPage])
 
 useEffect(()=>{geUserDetail()},[geUserDetail])
 

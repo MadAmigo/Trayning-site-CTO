@@ -9,9 +9,9 @@
 	}
 
 .button{
-		width :10px;
-		height: 16px;
-		}
+	width :10px;
+	height: 16px;
+	}
 
 .lookingForAJobDescription {
 	max-width: 200px;
@@ -23,9 +23,17 @@
 	margin-left:80px;
 	}
 
+
+
+
 .profilePhoto_button {
 	display: inline;
 	}
+
+
+
+
+
 
 .field_LookingForAJobDescription  {
 	min-width: 300px;
@@ -37,4 +45,8 @@
 
 .updataPhotoInput_button {
 	margin: 10px 0px 10px 50px;
+	}
+
+imput + span {
+	color: red;
 	}

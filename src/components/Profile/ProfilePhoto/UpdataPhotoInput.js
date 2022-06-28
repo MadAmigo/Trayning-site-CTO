@@ -20,7 +20,7 @@ const UpdataPhotoInput=(props)=>{
           onChange={onChangeHandlSubmitPhoto}
         />
         <button  onClick={sendSelectedPhoto}>
-            Сохранить и закрыть
+           <span>Сохранить и закрыть</span> 
         </button>
     </div>
   )

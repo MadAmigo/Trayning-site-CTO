@@ -7,7 +7,7 @@ import {Selectors} from '../../redux/selectors.js'
 
 const HeaderContainer = ({getAuthData, ...props})=>{
    
-   useEffect(()=>{getAuthData()},[getAuthData]) 
+   useEffect(()=>{getAuthData()},[]) 
 
 	return (
 		<Header isAuth={props.isAuth}
